@@ -1,0 +1,32 @@
+﻿<Window x:Class="Assignment_10.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Assignment_10"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="400" Width="500">
+    <StackPanel>
+        <Menu>
+            <MenuItem Header="File">
+                <MenuItem x:Name="Open" Header="Open" Click="Open_Click"/>
+                <MenuItem x:Name="Exit" Header="Exit" Click="Exit_Click"/>
+            </MenuItem>
+            <MenuItem Header="Data">
+                <RadioButton x:Name="Max" IsChecked="True" GroupName="value">Highest Value</RadioButton>
+                <RadioButton x:Name="Min" IsChecked="False" GroupName="value">Lowest Value</RadioButton>
+                <RadioButton x:Name="All" IsChecked="False" GroupName="value">All Values</RadioButton>
+                <Separator/>
+                <RadioButton x:Name="Item" IsChecked="True" GroupName="info">Item</RadioButton>
+                <RadioButton x:Name="Sales" IsChecked="False" GroupName="info">Sales Rep</RadioButton>
+                <RadioButton x:Name="Region" IsChecked="False" GroupName="info">Region</RadioButton>
+                <Separator/>
+                <RadioButton x:Name="Sold" IsChecked="True" GroupName="amt">Units Sold</RadioButton>
+                <RadioButton x:Name="Revenue" IsChecked="False" GroupName="amt" >Revenue</RadioButton>
+            </MenuItem>
+            <MenuItem x:Name="Run" Header="Run Report" Click="Run_Click"></MenuItem>
+        </Menu>
+        <Label x:Name="Output" Height="365" HorizontalContentAlignment="Center" 
+               VerticalContentAlignment="Center">Select data file to begin</Label>
+    </StackPanel>
+</Window>
